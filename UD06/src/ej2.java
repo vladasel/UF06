@@ -4,28 +4,27 @@ import javax.swing.JOptionPane;
 public class ej2 {
 
 	public static void main(String[] args) {
-		int a = pideNumero1();// pedimos los numeros
-		int b = pideNumero2();
-		JOptionPane.showMessageDialog(null, "El numero random es: " + generaRandom(a, b));// generamos random y lo
-																							// mostramos
-	}
-
-	public static int pideNumero1() {// pide el primer numero
-		JOptionPane.showMessageDialog(null, "introduce entre que numeros quieres que se genere un numero ramdom");
-		int a = Integer.parseInt(JOptionPane.showInputDialog("introduce el primer numero: "));
-		return a;
-
-	}
-
-	public static int pideNumero2() {// pide el segundo numero
+		int numeros = Integer.parseInt(JOptionPane.showInputDialog("introduce cuantos numeros random quieres:"));
+		int a = Integer.parseInt(JOptionPane.showInputDialog("introduce el primer numero: "));// pedimos los numeros
 		int b = Integer.parseInt(JOptionPane.showInputDialog("introduce el segundo numero: "));
-		return b;
-
+		generaVariosRandom(numeros,a,b);//mostramos los nuemros random generados, llamando al metodo
+																							
 	}
 
-	public static int generaRandom(int num1, int num2) {// genra un num random entre 2 numeros datos
-		int numRandom = (int) (Math.random() * (num2 - num1) + num1);
-		return numRandom;
+	
+
+	public static void generaVariosRandom(int num,int a, int b) {
+		int arrayRandoms[]= new int[num];//definos array, en este caso tendrá la 
+		//ngitud que el usuario introduzca, segun cuantos numeros random quiere
+		
+		for (int i=0;i<num;i++) {//recorremos el array para ir definiendo el valor de las posiciones
+			arrayRandoms[i]=(int) (Math.random() * (b - a) + a);
+		}
+		
+		JOptionPane.showMessageDialog(null, "Tus numeros random se mostrarán por consula ;)");
+		for(int i=0;i<arrayRandoms.length;i++) {
+			System.out.println(arrayRandoms[i]);
+		}
 	}
 
 }
