@@ -20,7 +20,7 @@ public class ej11 {
 		imprimirArray(array2);
 		System.out.println("******************************");
 
-		array2 = llenarArray(array2);
+		llenarArray(array2);
 		System.out.println("array 1");
 		imprimirArray(array1);
 		System.out.println("array 2");
