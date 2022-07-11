@@ -10,7 +10,7 @@ public class ej9 {
 		int array[] = rellenaArray(longitud);// guardamos el array que nos devuelve el metodo
 		imprimeArray(array);// imprimimos el array llamando el metodo
 		sumaValoresArray(array);// llamada metodo para la suma de los valores del array pasado por parametro
-
+		sc.close();
 	}
 
 	// asigna valores random a todas las posiciones del array
